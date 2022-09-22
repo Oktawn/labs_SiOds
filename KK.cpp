@@ -118,8 +118,7 @@ ET sum_main_diag(ET** ar, int ar_y, int ar_x)
 {
 	ET sum = 0;
 	for (int i = 0; i < ar_y; i++)
-		for (int j = 0; j < ar_x; j++)
-			sum = (i==j) ? sum+=ar[i][j] : sum;
+		sum += ar[i][i];
 
 	return ET(sum);
 }
@@ -141,7 +140,7 @@ ET sum_second_diag(ET** ar, int ar_y, int ar_x)
 template<typename ET>
 string max_ind_ar(ET** ar, int ar_y, int ar_x)
 {
-	string ind = "fuck";
+	string ind = "fk";
 	ET max = 0;
 	for (int i = 0; i < ar_y; i++)
 		for (int j = 0; j < ar_x; j++)
@@ -160,7 +159,7 @@ string max_ind_ar(ET** ar, int ar_y, int ar_x)
 template<typename ET>
 string max_ind_rows(ET** ar, int rows, int ar_x)
 {
-	string ind = "fuck";
+	string ind = "fk";
 	ET max = 0;
 		for (int j = 0; j < ar_x; j++)
 		{
@@ -177,7 +176,7 @@ string max_ind_rows(ET** ar, int rows, int ar_x)
 template<typename ET>
 string max_ind_coloms(ET** ar, int ar_y, int coloms)
 {
-	string ind = "fuck";
+	string ind = "fk";
 	ET max = 0;
 	for (int j = 0; j < ar_y; j++)
 	{
@@ -194,16 +193,14 @@ string max_ind_coloms(ET** ar, int ar_y, int coloms)
 template<typename ET>
 string max_ind_main_diag(ET** ar, int ar_y, int ar_x)
 {
-	string ind = "fuck";
+	string ind = "fk";
 	ET max = INT_MIN;
 	for (int i = 0; i < ar_y; i++)
-		for (int j = 0; j < ar_x; j++)
 		{
-			if ((i==j) && (max < ar[i][j]))
+			if (max < ar[i][i])
 			{
-				max = ar[i][j];
-				ind = to_string(i) + " " + to_string(j);
-				//ind = to_string(max);
+				max = ar[i][i];
+				ind = to_string(i) + " " + to_string(i);
 			}
 
 		}
@@ -213,7 +210,7 @@ string max_ind_main_diag(ET** ar, int ar_y, int ar_x)
 template<typename ET>
 string max_ind_second_diag(ET** ar, int ar_y, int ar_x)
 {
-	string ind = "fuck";
+	string ind = "fk";
 	ET max = INT_MIN;
 	for (int i = 0; i <ar_y; i++)
 	{
@@ -250,10 +247,8 @@ template<typename ET>
 string search_el_main_diag(ET** ar, int ar_y, int ar_x, ET search)
 {
 	for (int i = 0; i < ar_y; i++)
-		for (int j = 0; j < ar_x; j++)
 		{
-			if ((i == j) && (search == ar[i][j])) return to_string(i) + " " + to_string(j);
-
+			if (search == ar[i][i]) return to_string(i) + " " + to_string(i);
 		}
 	return "no el";
 }
@@ -329,16 +324,11 @@ int sum_search_el_secind_diag(ET** ar, int ar_y, int ar_x, ET search)
 {
 	int sum = 0;
 	for (int i = 0; i < ar_y; i++)
-	{
-		for (int j = 0; j < ar_x; j++)
 		{
-			if ((i + j == ar_x - 1) && (search == ar[i][j]))
-			{
-				sum++;
-			}
+			if (search == ar[i][i]) sum++;
+
 		}
-	}
-	return 0;
+	return sum;
 }
 
 template<typename ET>
