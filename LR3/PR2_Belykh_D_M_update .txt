@@ -1,3 +1,54 @@
+//-----------student.h-----------------
+
+#pragma once
+
+#include <iostream>
+#include <fstream>
+#include <string>
+
+using namespace std;
+
+struct Stydent
+{
+	string FIO;
+	int mark[5];
+	string obj[5] = { "russian", "math", "physics","programming", "literate"};
+	float avgball=0;
+};
+struct Marsh
+{
+	string begst;
+	string term;
+	short int numer;
+};
+
+
+
+void addSt(Stydent st[], int size);
+void add_path(Marsh tr[], int size);
+
+void showST(Stydent st[], int size);
+void showTR(Marsh tr[], int size);
+void show_one_TR(Marsh tr[], int position);
+
+void search_student(Stydent st[], int size, string men);
+void search_maxMark_student(Stydent st[], int size, string search);
+
+void search_starting_path(Marsh tr[], int size, string start);
+void search_enging_path(Marsh tr[], int size, string end);
+void search_number_path(Marsh tr[], int size, int number);
+
+void bubble_sort_student_avgball(Stydent st[], int size);
+
+void bubble_sort_student_leks(Stydent st[], int size);
+
+void binary_file_cin(Stydent st[], int size);
+
+void binary_file_cout(Stydent st[], int size);
+
+
+//-----------student.cpp-----------------
+
 #include "student.h"
 
 void addSt(Stydent st[], int size)
@@ -182,3 +233,34 @@ void search_number_path(Marsh tr[], int size, int number)
 	}
 	if (flag == false) cout << " there is no such path\n";
 }
+
+
+//-----------LR3.cpp-----------------
+#include "student.h"
+
+int main()
+{
+
+    const int len = 25;
+    const int lg = 8;
+    string men;
+
+    Stydent std[len];
+    Marsh trafic[lg];
+
+    addSt(std, 1);
+    cout << endl;
+    showST(std, 1);
+    cout << "\nsearch:"; cin >> men;
+    cout << endl;
+    search_student(std, len, men);
+    binary_file_cin(std, len);
+
+    add_path(trafic, 2);
+    showTR(trafic, 2);
+    cout << "\nenter point: "; cin >> men;
+    search_enging_path(trafic, lg, men);
+
+    return 0;
+}
+
