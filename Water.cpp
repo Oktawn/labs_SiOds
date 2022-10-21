@@ -40,7 +40,7 @@ void enter(float* ar, int n)
 
 void show(int* ar, int n)
 {
-	cout << "ÃŒÃ Ã±Ã±Ã¨Ã¢: ";
+	cout << "Ìàññèâ: ";
 	for (int i = 0; i < n; i++) {
 		cout << ar[i] << " ";
 	}
@@ -48,7 +48,7 @@ void show(int* ar, int n)
 }
 void show(float* ar, int n)
 {
-	cout << "ÃŒÃ Ã±Ã±Ã¨Ã¢: ";
+	cout << "Ìàññèâ: ";
 	for (int i = 0; i < n; i++) {
 		cout << ar[i] << " ";
 	}
@@ -383,27 +383,27 @@ int bin_search(int* ar, int n, int k)
 void file_cin(int* ar, int n)
 {
 	ofstream file("Array.txt");
-	file << "Ã‚Ã Ã¸ Ã¬Ã Ã±Ã±Ã¨Ã¢ Ã± " << n << " Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã²Ã Ã¬Ã¨: ";
+	file << "Âàø ìàññèâ ñ " << n << " ýëåìåíòàìè: ";
 	file.close();
 	file.open("Array.txt", ios_base::app);
 	if (file.is_open()) {
 		for (int i = 0; i < n; i++)
 			file << ar[i] << " ";
 	}
-	else cout << "ÃŽÃ¸Ã¨Ã¡ÃªÃ ! ÃÃ¥ Ã³Ã¤Ã Â¸Ã²Ã±Ã¿ Ã®Ã²ÃªÃ°Ã»Ã²Ã¼ Ã´Ã Ã©Ã« Ã¤Ã«Ã¿ Ã§Ã Ã¯Ã¨Ã±Ã¨!";
+	else cout << "Îøèáêà! Íå óäà¸òñÿ îòêðûòü ôàéë äëÿ çàïèñè!";
 	file.close();
 }
 void file_cin(float* ar, int n)
 {
 	ofstream file("Array.txt");
-	file << "Ã‚Ã Ã¸ Ã¬Ã Ã±Ã±Ã¨Ã¢ Ã± " << n << " Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã²Ã Ã¬Ã¨: ";
+	file << "Âàø ìàññèâ ñ " << n << " ýëåìåíòàìè: ";
 	file.close();
 	file.open("Array.txt", ios_base::app);
 	if (file.is_open()) {
 		for (int i = 0; i < n; i++)
 			file << ar[i] << " ";
 	}
-	else cout << "ÃŽÃ¸Ã¨Ã¡ÃªÃ ! ÃÃ¥ Ã³Ã¤Ã Â¸Ã²Ã±Ã¿ Ã®Ã²ÃªÃ°Ã»Ã²Ã¼ Ã´Ã Ã©Ã« Ã¤Ã«Ã¿ Ã§Ã Ã¯Ã¨Ã±Ã¨!";
+	else cout << "Îøèáêà! Íå óäà¸òñÿ îòêðûòü ôàéë äëÿ çàïèñè!";
 	file.close();
 }
 
@@ -411,7 +411,7 @@ void binary_file_cin(int* ar, int n)
 {
 	char name[50] = "Array";
 	ofstream file(name, ios_base::binary);
-	file << "Ã‚Ã Ã¸ Ã¬Ã Ã±Ã±Ã¨Ã¢ Ã± " << n << " Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã²Ã Ã¬Ã¨: ";
+	file << "Âàø ìàññèâ ñ " << n << " ýëåìåíòàìè: ";
 	file.close();
 	file.open(name, ios_base::app, ios_base::binary);
 	if (file.is_open()) {
@@ -424,7 +424,7 @@ void binary_file_cin(float* ar, int n)
 {
 	char name[50] = "Array";
 	ofstream file(name, ios_base::binary);
-	file << "Ã‚Ã Ã¸ Ã¬Ã Ã±Ã±Ã¨Ã¢ Ã± " << n << " Ã½Ã«Ã¥Ã¬Ã¥Ã­Ã²Ã Ã¬Ã¨: ";
+	file << "Âàø ìàññèâ ñ " << n << " ýëåìåíòàìè: ";
 	file.close();
 	file.open(name, ios_base::app, ios_base::binary);
 	if (file.is_open()) {
