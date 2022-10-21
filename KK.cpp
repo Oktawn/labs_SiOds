@@ -149,7 +149,6 @@ string max_ind_ar(ET** ar, int ar_y, int ar_x)
 			{
 				max = ar[i][j];
 				ind = to_string(i) + " " + to_string(j);
-				//ind = to_string(max);
 			}
 
 		}
@@ -311,9 +310,8 @@ int sum_search_el_main_diag(ET** ar, int ar_y, int ar_x, ET search)
 {
 	int sum = 0;
 	for (int i = 0; i < ar_y; i++)
-		for (int j = 0; j < ar_x; j++)
 		{
-			if ((i == j) && (search == ar[i][j])) sum++;
+			if (search == ar[i][i]) sum++;
 
 		}
 	return sum;
@@ -324,11 +322,16 @@ int sum_search_el_secind_diag(ET** ar, int ar_y, int ar_x, ET search)
 {
 	int sum = 0;
 	for (int i = 0; i < ar_y; i++)
+	{
+		for (int j = 0; j < ar_x; j++)
 		{
-			if (search == ar[i][i]) sum++;
-
+			if ((i + j == ar_x - 1) && (search == ar[i][j]))
+			{
+				sum++;
+			}
 		}
-	return sum;
+	}
+	return 0;
 }
 
 template<typename ET>
@@ -595,6 +598,40 @@ ET max_number_arr(ET** ar, int ar_y, int ar_x)
 			}
 		};
 	};
+
+	/*ET ed = INT_MIN;
+	int kl;
+	bool flag = false;
+	
+	do 
+	{
+		for (int i = 0; i < ar_y; i++)
+		{	
+			for (int j = 0; j < ar_x; j++)
+			{
+				ed = (ed < ar[i][j]) ? ar[i][j] : ed;
+			}
+		}
+		kl = 0;
+		for (int i = 0; i < ar_y; i++)
+		{
+			for (int j = 0; j < ar_x; j++)
+			{
+				if (ar[i][j] == ed) kl++;
+			}
+		}
+		if (kl > 1) flag = true;
+		else 
+			for (int i = 0; i < ar_y; i++)
+			{
+				for (int j = 0; j < ar_x; j++)
+				{
+					if (ar[i][j] == ed)
+						ar[i][j] = INT_MIN;
+				}
+			}
+
+	} while (!flag);*/
 
 	return ET(ed);
 }
