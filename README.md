@@ -8,4 +8,4 @@
 
 [double linked list](https://github.com/Oktawn/labs_SiOds/tree/labs_4)  
 
-[labs_5](https://github.com/Oktawn/labs_SiOds/tree/labs_5)  
+[queue and deque](https://github.com/Oktawn/labs_SiOds/tree/labs_5)  
