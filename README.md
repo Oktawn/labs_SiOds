@@ -1,11 +1,24 @@
-# labs_SiOds
+# labs_6
 
-[one-Dimensional Array](https://github.com/Oktawn/labs_SiOds/tree/labs_1) 
+## BST-дерево
+Реализовать BST-дерево и все его операции в рекурсивной и итеративной версии  на базе связного списка посредством описания АТД .
+   Основные операции  с бинарными деревьями поиска:
+*  добавление/вставка нового элемента - insertBST();
+*  обход бинарного дерева поиска (прямой, симметричный, обратный):
+*  preorderTree(), inorderTree(), postorderTree();
+*  поиск элемента в дереве – searchBST();
+*  поиск максимального, минимального элемента – minBST(), maxBST();
+*  поиск следующего и предыдущего по значению – succBST(), predBST();
+*  удаление элемента – deleteBST();
+*  удаление всего дерева – clear();
+*  проверка на пустоту – isEmpty().
 
-[two-dimensional array](https://github.com/Oktawn/labs_SiOds/tree/labs_2)  
-
-[sigle linked list](https://github.com/Oktawn/labs_SiOds/tree/labs_3) 
-
-[double linked list](https://github.com/Oktawn/labs_SiOds/tree/labs_4)  
-
-[queue and deque](https://github.com/Oktawn/labs_SiOds/tree/labs_5)  
+## Heap (not full)
+Реализовать  сортирующее дерево как АТД Пирамиды (двоичной кучи) на массиве, разработав  все основные операций структуры данных.
+Основные операции  с пирамидой:
+*  построить пирамиду  – buildHeap(), преобразовать неупорядоченный массив в пирамиду;
+*  добавить элемент в пирамиду – pushHeap();
+*  удалить корневой (минимальный/максимальный) элемент – popHeap();
+*  упорядочивание пирамиды –heapify();
+*  показать корневой элемент – peekHeap();
+*  пирамидальная сортировка – sortHeap().
