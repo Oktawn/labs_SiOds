@@ -1,8 +1,8 @@
 # labs_SiOds
 
-[labs_1](https://github.com/Oktawn/labs_SiOds/tree/labs_1) 
+[one-Dimensional Array](https://github.com/Oktawn/labs_SiOds/tree/labs_1) 
 
-[labs_2](https://github.com/Oktawn/labs_SiOds/tree/labs_2)  
+[two-dimensional array](https://github.com/Oktawn/labs_SiOds/tree/labs_2)  
 
 [sigle linked list](https://github.com/Oktawn/labs_SiOds/tree/labs_3) 
 
